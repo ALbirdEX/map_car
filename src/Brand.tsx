@@ -28,7 +28,8 @@ export const Brand = (props: BrandType) => {
                         <td>{object.model}</td>
                     </tr>
                 )
-            })}</tbody>
+            })}
+            </tbody>
         </table>
     )
 };
