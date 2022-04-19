@@ -12,25 +12,16 @@ type TopCarType = {
 
 export const Brand = (props: BrandType) => {
     return (
-        <table>
-            <thead>
-            <tr>
-                <th>index</th>
-                <th>manufacturer</th>
-                <th>model</th>
-            </tr>
-            </thead>
-            <tbody>{props.topCars.map((object, index) => {
+        <ul>
+            {props.topCars.map((objectFromTopCarArray, manufacturer) => {
                 return (
-                    <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{object.manufacturer}</td>
-                        <td>{object.model}</td>
-                    </tr>
+                    <li>
+                        <span>{objectFromTopCarArray.manufacturer}</span>
+                        <span>   {objectFromTopCarArray.model}</span>
+                    </li>
                 )
             })}
-            </tbody>
-        </table>
+        </ul>
     )
 };
 
